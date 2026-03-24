@@ -9,18 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:    #070810;
-    --bg2:   #0d0f1a;
-    --bg3:   #111420;
+    --bg:    #09080a;
+    --bg2:   #0d0b0e;
+    --bg3:   #12100f;
     --white: #ffffff;
-    --cyan:  #00e5ff;
-    --cyan-dim: rgba(0,229,255,0.12);
-    --cyan-glow: rgba(0,229,255,0.05);
+    --cyan:  #FFD700;
+    --cyan-dim: rgba(255,215,0,0.12);
+    --cyan-glow: rgba(255,215,0,0.05);
     --border: rgba(255,255,255,0.07);
-    --border-c: rgba(0,229,255,0.28);
+    --border-c: rgba(255,215,0,0.28);
     --muted: rgba(255,255,255,0.42);
     --card:  rgba(255,255,255,0.033);
-    --card-h: rgba(0,229,255,0.055);
+    --card-h: rgba(255,215,0,0.055);
     --fd: 'Bebas Neue', sans-serif;
     --fu: 'Rajdhani', sans-serif;
     --fb: 'DM Sans', sans-serif;
@@ -40,8 +40,8 @@
     content: '';
     position: fixed; inset: 0;
     background-image:
-      linear-gradient(rgba(0,229,255,0.022) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,229,255,0.022) 1px, transparent 1px);
+      linear-gradient(rgba(255,215,0,0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,215,0,0.022) 1px, transparent 1px);
     background-size: 64px 64px;
     pointer-events: none; z-index: 0;
   }
@@ -68,7 +68,7 @@
   .lm {
     width: 36px; height: 36px;
     background: var(--cyan-dim);
-    border: 1px solid rgba(0,229,255,0.45);
+    border: 1px solid rgba(255,215,0,0.45);
     display: flex; align-items: center; justify-content: center;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     font-family: var(--fd); font-size: 18px; color: var(--cyan); line-height: 1;
@@ -114,12 +114,12 @@
   }
   .hg1 {
     position: absolute; top: 15%; right: 8%; width: 700px; height: 700px;
-    background: radial-gradient(circle, rgba(0,229,255,0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,215,0,0.07) 0%, transparent 70%);
     pointer-events: none;
   }
   .hg2 {
     position: absolute; bottom: 8%; left: 3%; width: 450px; height: 450px;
-    background: radial-gradient(circle, rgba(100,60,255,0.055) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,140,0,0.04) 0%, transparent 70%);
     pointer-events: none;
   }
   .hi2 { max-width: 1280px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
@@ -151,9 +151,9 @@
     padding: 14px 32px; text-decoration: none; display: inline-block;
     clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
     transition: opacity .2s, box-shadow .2s;
-    box-shadow: 0 0 30px rgba(0,229,255,.22);
+    box-shadow: 0 0 30px rgba(255,215,0,.22);
   }
-  .bp:hover { opacity: .9; box-shadow: 0 0 50px rgba(0,229,255,.38); }
+  .bp:hover { opacity: .9; box-shadow: 0 0 50px rgba(255,215,0,.38); }
   .bg {
     font-family: var(--fu); font-size: 13px; font-weight: 600; letter-spacing: .15em;
     text-transform: uppercase; color: var(--white); text-decoration: none;
@@ -199,13 +199,13 @@
     background: linear-gradient(90deg, transparent, var(--cyan), transparent);
     transform: scaleX(0); transition: transform .4s ease; transform-origin: left;
   }
-  .sc:hover { background: var(--card-h); border-color: rgba(0,229,255,.18); }
+  .sc:hover { background: var(--card-h); border-color: rgba(255,215,0,.18); }
   .sc:hover::before { transform: scaleX(1); }
   .ct {
     display: inline-flex; align-items: center; gap: 6px;
     font-family: var(--fm); font-size: 10px; letter-spacing: .15em; text-transform: uppercase;
     color: var(--cyan); background: var(--cyan-dim);
-    border: 1px solid rgba(0,229,255,.18); padding: 4px 10px; margin-bottom: 24px;
+    border: 1px solid rgba(255,215,0,.18); padding: 4px 10px; margin-bottom: 24px;
   }
   .cp { font-family: var(--fd); font-size: 48px; color: var(--white); line-height: 1; margin-bottom: 4px; }
   .cpn { font-family: var(--fu); font-size: 11px; font-weight: 600; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; margin-bottom: 20px; }
@@ -222,7 +222,7 @@
   .cb {
     font-family: var(--fu); font-size: 12px; font-weight: 700; letter-spacing: .15em;
     text-transform: uppercase; color: var(--cyan); text-decoration: none;
-    border: 1px solid rgba(0,229,255,.38); padding: 11px 24px; display: inline-block;
+    border: 1px solid rgba(255,215,0,.38); padding: 11px 24px; display: inline-block;
     transition: background .2s, color .2s;
   }
   .cb:hover { background: var(--cyan); color: var(--bg); }
@@ -232,14 +232,14 @@
   #ai3d::before {
     content: ''; position: absolute; top: -200px; right: -200px;
     width: 800px; height: 800px;
-    background: radial-gradient(circle, rgba(0,229,255,.05) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(255,215,0,.05) 0%, transparent 60%);
     pointer-events: none;
   }
   .ag { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
   .pb {
     display: inline-flex; align-items: center; gap: 8px;
     font-family: var(--fm); font-size: 10px; letter-spacing: .12em; color: var(--cyan);
-    background: var(--cyan-dim); border: 1px solid rgba(0,229,255,.22);
+    background: var(--cyan-dim); border: 1px solid rgba(255,215,0,.22);
     padding: 6px 14px; margin-bottom: 32px;
   }
   .at {
@@ -253,7 +253,7 @@
     background: var(--card); border: 1px solid var(--border);
     padding: 24px 20px; transition: border-color .2s;
   }
-  .mb:hover { border-color: rgba(0,229,255,.22); }
+  .mb:hover { border-color: rgba(255,215,0,.22); }
   .mv { font-family: var(--fd); font-size: 32px; color: var(--white); line-height: 1; margin-bottom: 6px; }
   .mv span { color: var(--cyan); }
   .mk { font-family: var(--fu); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
@@ -264,7 +264,7 @@
   }
   .pc::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--cyan), rgba(120,80,255,.8));
+    background: linear-gradient(90deg, var(--cyan), rgba(255,165,0,0.9));
   }
   .pch { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 32px; }
   .pct { font-family: var(--fu); font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
@@ -304,7 +304,7 @@
   .civ a { color: var(--white); text-decoration: none; transition: color .2s; }
   .civ a:hover { color: var(--cyan); }
   .db {
-    background: rgba(0,229,255,.03); border: 1px solid rgba(0,229,255,.1);
+    background: rgba(255,215,0,.03); border: 1px solid rgba(255,215,0,.1);
     padding: 28px; font-size: 12px; font-weight: 300; color: rgba(255,255,255,.58);
     line-height: 1.72;
   }
@@ -321,11 +321,81 @@
 
   @keyframes fu { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
 
+  /* ── HAMBURGER ── */
+  .ham {
+    display:none; flex-direction:column; gap:5px;
+    cursor:pointer; padding:8px; z-index:200; background:none; border:none;
+  }
+  .ham span { display:block; width:24px; height:2px; background:var(--white); transition:all .3s; }
+  .mob-nav {
+    display:none; position:fixed; top:64px; left:0; right:0;
+    background:rgba(9,8,10,0.98); backdrop-filter:blur(24px);
+    border-bottom:1px solid var(--border-c); z-index:99;
+    padding:24px 24px 32px; flex-direction:column;
+  }
+  .mob-nav.open { display:flex; }
+  .mob-nav a {
+    font-family:var(--fu); font-size:16px; font-weight:600;
+    letter-spacing:.12em; text-transform:uppercase;
+    color:rgba(255,255,255,0.8); text-decoration:none;
+    padding:14px 0; border-bottom:1px solid var(--border); transition:color .2s;
+  }
+  .mob-nav a:hover { color:var(--cyan); }
+  .mob-nav .mncta {
+    margin-top:16px; text-align:center; font-family:var(--fu);
+    font-size:12px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+    color:var(--bg); background:var(--cyan); padding:14px 24px;
+    text-decoration:none; border-bottom:none !important;
+  }
+
+  /* ── TABLET ── */
+  @media(max-width:1024px){
+    .sg { grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); }
+  }
+
+  /* ── MOBILE ── */
   @media(max-width:900px){
-    .ag,.cg { grid-template-columns:1fr; gap:48px; }
-    .hs { gap:28px; flex-wrap:wrap; }
     nav { display:none; }
-    .hi,.si,.hero,footer { padding-left:24px; padding-right:24px; }
+    .ham { display:flex; }
+    .ag,.cg { grid-template-columns:1fr; gap:40px; }
+    .hs { gap:20px; flex-wrap:wrap; }
+    .hi { padding:0 20px; }
+    .si { padding:72px 20px; }
+    .hero { padding:100px 20px 60px; }
+    footer { padding-left:20px; padding-right:20px; }
+
+    .ht { font-size:clamp(48px,13vw,90px); }
+    .hd { font-size:15px; }
+    .ha { flex-direction:column; align-items:flex-start; gap:12px; }
+    .bp,.bg { width:100%; text-align:center; box-sizing:border-box; }
+    .hs { margin-top:48px; padding-top:32px; }
+    .sn { font-size:32px; }
+    .stit { font-size:clamp(30px,9vw,52px); }
+    .ssub { font-size:14px; }
+
+    .sg { grid-template-columns:1fr; }
+    .ams { grid-template-columns:1fr; }
+    .mv { font-size:clamp(28px,8vw,48px); }
+
+    .ptot { font-size:40px; }
+    .pa { flex-direction:column; align-items:flex-end; gap:2px; }
+    .pav { font-size:18px; }
+  }
+
+  @media(max-width:480px){
+    .ht { font-size:clamp(40px,12vw,64px); }
+    .stit { font-size:clamp(26px,10vw,40px); }
+    .sn { font-size:26px; }
+    .hi { height:56px; }
+    .mob-nav { top:56px; }
+  }
+
+  @media(max-width:700px){
+    .cta-block { grid-template-columns:1fr !important; padding:36px 24px !important; }
+    .cta-block > div:last-child { flex-direction:row !important; flex-wrap:wrap; gap:10px; }
+    .cta-block a { flex:1; min-width:140px; text-align:center !important; }
+    div[style*="grid-template-columns:repeat(auto-fill,minmax(280px"] { grid-template-columns:1fr !important; }
+    .hi2 .ha { flex-direction:column; }
   }
 </style>
 </head>
@@ -341,13 +411,28 @@
       </div>
     </a>
     <nav>
-      <a href="#services">Research</a>
+      <a href="#services">Services</a>
       <a href="#ai3d">ai3D</a>
+      <a href="#research">Research</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#tools">Partner Tools</a>
       <a href="#contact">Contact</a>
-      <a href="https://olympusservices.net" target="_blank" class="ncta">Visit Site</a>
     </nav>
+    <button class="ham" onclick="document.getElementById('mobnav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<div class="mob-nav" id="mobnav">
+  <a href="#services" onclick="document.getElementById('mobnav').classList.remove('open')">Services</a>
+  <a href="#ai3d" onclick="document.getElementById('mobnav').classList.remove('open')">ai3D</a>
+  <a href="#research" onclick="document.getElementById('mobnav').classList.remove('open')">Research</a>
+  <a href="#consulting" onclick="document.getElementById('mobnav').classList.remove('open')">Consulting</a>
+  <a href="#tools" onclick="document.getElementById('mobnav').classList.remove('open')">Partner Tools</a>
+  <a href="#contact" onclick="document.getElementById('mobnav').classList.remove('open')">Contact</a>
+  <a href="#contact" class="mncta" onclick="document.getElementById('mobnav').classList.remove('open')">Get In Touch</a>
+</div>
 
 <section class="hero">
   <div class="hg1"></div>
@@ -361,7 +446,7 @@
       <a href="#ai3d" class="bg">ai3D Platform</a>
     </div>
     <div class="hs">
-      <div><div class="sn">5<span>+</span></div><div class="sl">Research Reports</div></div>
+      <div><div class="sn">12<span>+</span></div><div class="sl">Research Reports</div></div>
       <div><div class="sn"><span>$</span>40</div><div class="sl">Net-40 Pool / Device</div></div>
       <div><div class="sn">3.5<span>B</span></div><div class="sl">Android Addressable</div></div>
       <div><div class="sn"><span>$</span>22<span>B</span></div><div class="sl">ai3D Enterprise Value</div></div>
@@ -392,7 +477,7 @@
           <li>Revenue routing frameworks bypassing the app store duopoly</li>
           <li>Implementation roadmap for platform operators and developers</li>
         </ul>
-        <a href="mailto:info@olympusservices.net?subject=Purchase: Carrier Billing Economics" class="cb">Access Report →</a>
+        <a href="/cdn-cgi/l/email-protection#d3babdb5bc93bcbfaabea3a6a0a0b6a1a5bab0b6a0fdbdb6a7eca0a6b1b9b6b0a7ee83a6a1b0bbb2a0b6e9f390b2a1a1bab6a1f391babfbfbabdb4f396b0bcbdbcbebab0a0" class="cb">Access Report →</a>
       </div>
 
       <div class="sc">
@@ -409,7 +494,7 @@
           <li>CoinLedger integration for automated IRS-compliant reporting</li>
           <li>Audit defense documentation and record-keeping protocols</li>
         </ul>
-        <a href="mailto:info@olympusservices.net?subject=Purchase: Crypto Tax Optimization" class="cb">Access Report →</a>
+        <a href="/cdn-cgi/l/email-protection#8ae3e4ece5cae5e6f3e7fafff9f9eff8fce3e9eff9a4e4effeb5f9ffe8e0efe9feb7dafff8e9e2ebf9efb0aac9f8f3fafee5aadeebf2aac5fafee3e7e3f0ebfee3e5e4" class="cb">Access Report →</a>
       </div>
 
       <div class="sc">
@@ -426,7 +511,7 @@
           <li>Risk-adjusted position sizing and portfolio integration</li>
           <li>Alert infrastructure and automated execution pipeline design</li>
         </ul>
-        <a href="mailto:info@olympusservices.net?subject=Purchase: Algorithmic Edge TradingView" class="cb">Access Report →</a>
+        <a href="/cdn-cgi/l/email-protection#9ef7f0f8f1def1f2e7f3eeebededfbece8f7fdfbedb0f0fbeaa1edebfcf4fbfdeaa3ceebecfdf6ffedfba4bedff2f9f1ecf7eaf6f3f7fdbedbfaf9fbbecaecfffaf7f0f9c8f7fbe9" class="cb">Access Report →</a>
       </div>
 
       <div class="sc">
@@ -443,7 +528,7 @@
           <li>Revenue attribution modeling and conversion tracking setup</li>
           <li>Scaling framework: first commission to consistent monthly revenue</li>
         </ul>
-        <a href="mailto:info@olympusservices.net?subject=Purchase: Agentic Affiliate Digistore24" class="cb">Access Report →</a>
+        <a href="/cdn-cgi/l/email-protection#630a0d050c230c0f1a0e131610100611150a0006104d0d06175c101601090600175e331611000b02100659432204060d170a00432205050a0f0a02170643270a040a10170c11065157" class="cb">Access Report →</a>
       </div>
 
     </div>
@@ -465,11 +550,11 @@
           <div class="mb"><div class="mv"><span>$</span>22.9<span>B</span></div><div class="mk">Bull Enterprise Value</div></div>
           <div class="mb"><div class="mv">75<span>%</span></div><div class="mk">Developer Revenue Share</div></div>
         </div>
-        <a href="mailto:info@olympusservices.net?subject=ai3D Strategic Partnership Inquiry" class="bp">Partnership Inquiry →</a>
+        <a href="/cdn-cgi/l/email-protection#b7ded9d1d8f7d8dbcedac7c2c4c4d2c5c1ded4d2c499d9d2c388c4c2d5ddd2d4c38ad6de84f397e4c3c5d6c3d2d0ded497e7d6c5c3d9d2c5c4dfdec797fed9c6c2dec5ce" class="bp">Partnership Inquiry →</a>
 
         <!-- ai3D Flagship Report -->
         <div style="background:var(--card);border:1px solid var(--border);padding:40px 36px;margin-top:40px;position:relative;overflow:hidden;">
-          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),rgba(120,80,255,.8));"></div>
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),rgba(255,165,0,0.9));"></div>
           <div class="ct" style="margin-bottom:20px;">Flagship Report</div>
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px;">
             <h3 class="ctit" style="margin-bottom:0;font-size:20px;">The $40 Device Pool: ai3D Net-40 Royalty Framework</h3>
@@ -484,7 +569,7 @@
             <li>Apple delayed SDK licensee model — Year 3–4 entry framework (+$4.3B EV)</li>
             <li>LOI architecture: Series A + exclusive patent license + platform partnership</li>
           </ul>
-          <a href="mailto:info@olympusservices.net?subject=Purchase: ai3D Net-40 Royalty Framework" class="cb">Access Report →</a>
+          <a href="/cdn-cgi/l/email-protection#7f161119103f101306120f0a0c0c1a0d09161c1a0c51111a0b400c0a1d151a1c0b422f0a0d1c171e0c1a455f1e164c3b5f311a0b524b4f5f2d10061e130b065f390d1e121a08100d14" class="cb">Access Report →</a>
         </div>
       </div>
 
@@ -503,7 +588,7 @@
             <div class="prb" style="width:43.75%;"></div>
             <div class="prc">
               <div class="pp">
-                <div class="pd" style="background:#00e5ff;"></div>
+                <div class="pd" style="background:#FFD700;"></div>
                 <div><div class="pn">Qualcomm</div><div class="pl">Silicon Layer</div></div>
               </div>
               <div class="pa"><div class="pav">$17.50</div><div class="pap">43.75%</div></div>
@@ -533,7 +618,7 @@
           </div>
 
           <div class="pr" style="border-bottom:none;">
-            <div class="prb" style="width:11.25%;background:rgba(0,229,255,.09);"></div>
+            <div class="prb" style="width:11.25%;background:rgba(255,215,0,.09);"></div>
             <div class="prc">
               <div class="pp">
                 <div class="pd" style="background:#ffffff;"></div>
@@ -544,7 +629,7 @@
           </div>
 
           <div class="tll">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="3" y="6" width="8" height="7" rx="1" stroke="#00e5ff" stroke-width="1.2"/><path d="M4.5 6V4a2.5 2.5 0 0 1 5 0v2" stroke="#00e5ff" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="3" y="6" width="8" height="7" rx="1" stroke="#FFD700" stroke-width="1.2"/><path d="M4.5 6V4a2.5 2.5 0 0 1 5 0v2" stroke="#FFD700" stroke-width="1.2" stroke-linecap="round"/></svg>
             <span>Triple-Lock: Silicon · Glass · Network</span>
           </div>
         </div>
@@ -552,7 +637,7 @@
         <!-- 5-Year Projections -->
         <div style="background:var(--bg3);border:1px solid var(--border);padding:32px;margin-top:2px;">
           <div style="font-family:var(--fu);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;">5-Year Pool Revenue Projections</div>
-          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;">
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;overflow-x:auto;">
             <div style="text-align:center;padding:14px 6px;background:var(--card);border:1px solid var(--border);">
               <div style="font-family:var(--fd);font-size:18px;color:var(--white);">$200M</div>
               <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:3px;">Y1</div>
@@ -573,7 +658,7 @@
               <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:3px;">Y4</div>
               <div style="font-family:var(--fm);font-size:9px;color:var(--cyan);">30M units</div>
             </div>
-            <div style="text-align:center;padding:14px 6px;background:rgba(0,229,255,.06);border:1px solid rgba(0,229,255,.2);">
+            <div style="text-align:center;padding:14px 6px;background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.2);">
               <div style="font-family:var(--fd);font-size:18px;color:var(--cyan);">$2.0B</div>
               <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:3px;">Y5</div>
               <div style="font-family:var(--fm);font-size:9px;color:var(--cyan);">50M units</div>
@@ -586,7 +671,7 @@
         </div>
 
         <!-- Apple Entry -->
-        <div style="background:var(--card);border:1px solid rgba(0,229,255,.14);padding:22px 28px;margin-top:2px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+        <div style="background:var(--card);border:1px solid rgba(255,215,0,.14);padding:22px 28px;margin-top:2px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
           <div>
             <div style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Apple Entry Model</div>
             <div style="font-family:var(--fu);font-size:15px;font-weight:700;color:var(--white);">Year 3–4 SDK Licensee</div>
@@ -598,6 +683,476 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<div class="div"></div>
+
+<section id="research" style="background:var(--bg);">
+  <div class="si">
+    <div class="slb">Private Placement · Institutional Research</div>
+    <h2 class="stit">RESEARCH LIBRARY</h2>
+    <p class="ssub">Investor-grade deep research on private companies shaping the next decade of AI hardware, infrastructure, and spatial computing — before they reach public markets. 28 reports in series, 12 published.</p>
+
+    <!-- Pricing Tiers -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px;margin-bottom:60px;">
+
+      <!-- Single Report -->
+      <div style="background:var(--bg3);border:1px solid var(--border);padding:40px 36px;position:relative;">
+        <div style="font-family:var(--fu);font-size:21px;font-weight:700;color:var(--white);letter-spacing:.04em;margin-bottom:12px;">Single Report</div>
+        <div style="font-family:var(--fd);font-size:56px;color:var(--white);line-height:1;margin-bottom:4px;"><span style="font-size:28px;vertical-align:top;margin-top:10px;display:inline-block;">$</span>249</div>
+        <div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:.12em;margin-bottom:28px;">PER REPORT · INSTANT PDF DOWNLOAD</div>
+        <ul style="list-style:none;margin-bottom:32px;">
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Full 18–20 page deep research report</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Technology &amp; architecture analysis</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Full funding history &amp; investor profiles</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Competitive landscape mapping</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Investment thesis &amp; valuation scenarios</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Key takeaways &amp; risk assessment</li>
+        </ul>
+        <a href="#report-list" style="font-family:var(--fu);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:13px 24px;display:block;text-align:center;text-decoration:none;transition:background .2s,color .2s;"
+           onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'"
+           onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Select a Report ↓</a>
+      </div>
+
+      <!-- Bundle — Featured -->
+      <div style="background:var(--bg3);border:1px solid rgba(255,215,0,.38);padding:40px 36px;position:relative;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),rgba(255,165,0,0.9));"></div>
+        <div style="font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--cyan);padding:4px 12px;display:inline-block;margin-bottom:16px;">Best Value</div>
+        <div style="font-family:var(--fu);font-size:21px;font-weight:700;color:var(--white);letter-spacing:.04em;margin-bottom:12px;">Research Bundle</div>
+        <div style="font-family:var(--fd);font-size:56px;color:var(--white);line-height:1;margin-bottom:4px;"><span style="font-size:28px;vertical-align:top;margin-top:10px;display:inline-block;">$</span>899</div>
+        <div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:.12em;margin-bottom:28px;">ALL 12 REPORTS · SAVE $1,090</div>
+        <ul style="list-style:none;margin-bottom:32px;">
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>All 12 current reports in one ZIP</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Complete AI infrastructure landscape coverage</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Chai Discovery · Unconventional AI · Genspark · Luma · Cursor · Parallel · Hippocratic · Uniphore · Periodic · Cerebras · Groq · Mythic</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Cross-company competitive dynamics</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>The Inference Era strategic framework</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>NVIDIA $20B acquisition analysis included</li>
+        </ul>
+        <a href="/cdn-cgi/l/email-protection#e89a8d9b8d899a8b80a887849185989d9b9b8d9a9e818b8d9bc6868d9cd79b9d8a828d8b9cd5ba8d9b8d899a8b80c8aa9d868c848dc80a687cc8ccd9dcd1d1" style="font-family:var(--fu);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--bg);background:var(--cyan);padding:14px 24px;display:block;text-align:center;text-decoration:none;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Purchase All 12 Reports — $1,499</a>
+      </div>
+
+      <!-- Annual Pass -->
+      <div style="background:var(--bg3);border:1px solid var(--border);padding:40px 36px;position:relative;">
+        <div style="font-family:var(--fu);font-size:21px;font-weight:700;color:var(--white);letter-spacing:.04em;margin-bottom:12px;">Annual Intelligence Pass</div>
+        <div style="font-family:var(--fd);font-size:56px;color:var(--white);line-height:1;margin-bottom:4px;"><span style="font-size:28px;vertical-align:top;margin-top:10px;display:inline-block;">$</span>1,499</div>
+        <div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:.12em;margin-bottom:28px;">PER YEAR · ALL CURRENT + FUTURE REPORTS</div>
+        <ul style="list-style:none;margin-bottom:32px;">
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>All 12 current reports immediately</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>All 16 remaining reports as published</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Priority access to new intelligence</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Q2–Q3 2026 report releases included</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>1-hour strategic consulting session</li>
+          <li style="font-family:var(--fu);font-size:13px;font-weight:500;color:rgba(255,255,255,0.75);padding:8px 0;display:flex;align-items:flex-start;gap:10px;"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0;">▸</span>Custom research request consideration</li>
+        </ul>
+        <a href="/cdn-cgi/l/email-protection#6c1e091f090d1e0f042c030015011c191f1f091e1a050f091f42020918531f190e06090f18512d0202190d004c250218090000050b09020f094c3c0d1f1f4c8eecf84c485d585555" style="font-family:var(--fu);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:13px 24px;display:block;text-align:center;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase Annual Pass — $1,499</a>
+      </div>
+    </div>
+
+    <!-- Report Cards -->
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;" id="report-list">
+      <div style="font-family:var(--fu);font-size:22px;font-weight:700;color:var(--white);">Available Reports — Series I</div>
+      <div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:.1em;">12 OF 28 PUBLISHED · SERIES CONTINUES Q2–Q3 2026</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px;">
+
+      <!-- Mythic AI -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #01 of 28 · Analog AI Hardware · December 2025</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Mythic AI</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">Analog compute-in-memory delivering 100× GPU energy efficiency. $125M Series D led by DCVC — oversubscribed. Honda JDA (Feb 2026). Lockheed Martin production validation. Next-gen 120 TOPS/watt via Microchip SuperFlash. $266M+ total funding.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Analog CIM</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$125M Series D</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Edge AI</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Defense</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#0d7f687e686c7f6e654d626174607d787e7e687f7b646e687e23636879327e786f67686e79305d787f6e656c7e68372d40747965646e2d4c442d5f687d627f792def8d992d293f3934" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+
+      <!-- Chai Discovery #2 -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #02 of 28 · AI Drug Discovery · March 2026</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Chai Discovery</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">$130M Series B at $1.3B valuation — unicorn in under two years. Chai-2 designs full-length monoclonal antibodies de novo: 86% developability rate, sub-angstrom cryo-EM validation, successful against undruggable GPCR targets. Eli Lilly collaboration signed 25 days after close. OpenAI investor across all rounds. Josh Meier: ex-OpenAI GPT-1/2, Meta FAIR ESM1.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$130M Series B</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$1.3B Valuation</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Eli Lilly</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">De Novo Antibody AI</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#05776067717577667d4568617460677e717443736867706e6974736a4543776068656a437360716a69706267606943" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+      <!-- Unconventional AI #4 -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #04 of 28 · Analog AI Hardware · March 2026</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Unconventional AI</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">The largest hardware seed round in history — $475M at $4.5B, two months after founding. a16z + Lightspeed co-lead; Sequoia, Databricks, and Jeff Bezos participate. CEO Naveen Rao: PhD computational neuroscience, Nervana → Intel ($400M), MosaicML → Databricks ($1.3B). Mission: biology-scale energy efficiency. Analog compute-in-memory targeting 100×–1,000× GPU efficiency. 10B-fold gap to Landauer Limit.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$475M Seed</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$4.5B Valuation</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">a16z · Lightspeed · Bezos</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Analog Neuromorphic</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#14667166707467677d5479706475726b646369704470677669706167706950596172" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+      <!-- Genspark #5 -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #05 of 28 · Agentic AI Workspace · March 2026</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Genspark</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">$275M oversubscribed Series B at $1.25B — Emergence Capital (Salesforce, Zoom, Box investor) leads. $50M ARR in 5 months; $36M ARR within 45 days of launch. 20% MoM growth. Mixture-of-Agents architecture: 30+ AI models, 150+ tools, 20+ datasets → boardroom-ready deliverables. All existing investors doubled down. CEO Eric Jing co-founded Microsoft Bing.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$275M Series B</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$50M ARR · 5 Months</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Emergence Capital</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Mixture-of-Agents</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#2d5e435f5944584b5e496d4641504b425059446b5b485e41464b42454f4260635b425a4c5e6d" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+      <!-- Luma AI #6 -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #06 of 28 · Generative Video AI · November 2025</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Luma AI</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">$900M Series C led by HUMAIN (Saudi PIF) at $4B+ valuation. Ray3 — the world's first reasoning video model — benchmarks above OpenAI Sora 2. 30M+ platform users. Adobe Firefly exclusive launch partner. Project Halo: a 2-gigawatt Saudi supercluster powering peta-scale world model training.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$900M Series C</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">HUMAIN · Saudi PIF</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Ray3 · World Models</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Adobe · NVIDIA · AWS</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#45372036202437262d052a293c28353036362037332c2620366b2b20317a3630272f20263178153037262d2436207f650930282465040c651720352a373165a7c5d1656177717c" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+      <!-- Anysphere/Cursor #7 -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #07 of 28 · AI Developer Tools · November 2025</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Anysphere (Cursor)</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">The fastest B2B SaaS company in history to $1B ARR — $1M to $1B in 24 months with $0 marketing spend. $2.3B Series D at $29.3B valuation co-led by Accel and Coatue. NVIDIA and Google strategic investors. OpenAI attempted acquisition; acquired Windsurf ($3B) after being rebuffed. 50%+ of Fortune 500 adopted. 1M+ daily active developers.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$2.3B Series D</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$29.3B Valuation</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$1B+ ARR</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Fastest SaaS Ever</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#215344524440534249614e4d584c51545252445357484244520f4f44551e5254434b4442551c71545342494052441b01604f585251494453440109625453524e5308017344514e535501c3a1b50105131518" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+      <!-- Parallel -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #08 of 28 · AI Web Infrastructure · November 2025</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Parallel</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">Parag Agrawal (ex-Twitter CEO) rebuilds the internet for AI agents. $100M Series A at $740M, co-led by Kleiner Perkins &amp; Index Ventures. "26 years later, Parallel is indexing the web for its next user — AI agents." Open market publisher mechanism.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Agent Web</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$100M Series A</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Kleiner Perkins</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Infrastructure</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#c4b6a1b7a1a5b6a7ac84aba8bda9b4b1b7b7a1b6b2ada7a1b7eaaaa1b0fbb7b1a6aea1a7b0f994b1b6a7aca5b7a1fee494a5b6a5a8a8a1a8e496a1b4abb6b0e4264450e4e0f6f0fd" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+
+      <!-- Hippocratic AI #9 -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #09 of 28 · Healthcare AI Agents · November 2025</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Hippocratic AI</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">$126M Series C at $3.5B valuation. Patient-facing generative AI healthcare agents — 115M+ patient interactions, zero safety incidents. Polaris: 22-LLM constellation, 4.2T parameters, 99.38% clinical accuracy, patented. 50+ health systems in 6 countries including Cleveland Clinic, UHS, NHS. 4M+ projected US healthcare worker shortfall by 2026 is the structural tailwind.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$126M Series C</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$3.5B Valuation</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Healthcare AI</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">115M Patient Interactions</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#cebcabbdabafbcada68ea1a2b7a3bebbbdbdabbcb8a7adabbde0a0abbaf1bdbbaca4abadbaf39ebbbcada6afbdabf4ee86a7bebea1adbcafbaa7adee8f87ee9cabbea1bcbaee2c4e5aeeeafcfaf7" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+      <!-- Uniphore #11 -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #11 of 28 · Enterprise Business AI · October 2025</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Uniphore</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">$260M Series F at $2.5B valuation — anchored by NVIDIA, AMD, Snowflake, and Databricks. 17-year journey from IIT Madras $100K grant to $1.17B total raised. Business AI Cloud: sovereign, composable enterprise AI platform. 2,000+ global clients including JPMorgan Chase, Allstate, Bloomberg, DHL, US Coast Guard. 4 acquisitions in 8 months.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$260M Series F</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">NVIDIA · AMD · Snowflake · Databricks</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Business AI Cloud</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">2,000+ Enterprise Clients</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#c2b0a7b1a7a3b0a1aa82adaebbafb2b7b1b1a7b0b4aba1a7b1ecaca7b6fdb1b7a0a8a7a1b6ff92b7b0a1aaa3b1a7f8e297acabb2aaadb0a7e290a7b2adb0b6e2204256e2e6f0f6fb" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+      <!-- Periodic Labs -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #17 of 28 · AI-for-Science · September 2025</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Periodic Labs</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">ChatGPT co-creator Liam Fedus + GNoME co-creator Dogus Cubuk build autonomous AI scientists. $300M seed — largest in startup history. a16z leads. Bezos, Schmidt, Jeff Dean, NVIDIA NVentures. North Star: room-temperature superconductors.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$300M Seed</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">a16z · Bezos</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Materials AI</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Superconductors</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#92e0f7e1f7f3e0f1fad2fdfeebffe2e7e1e1f7e0e4fbf1f7e1bcfcf7e6ade1e7f0f8f7f1e6afc2e7e0f1faf3e1f7a8b2c2f7e0fbfdf6fbf1b2def3f0e1b2c0f7e2fde0e6b2701206b2b6a0a6ab" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+      <!-- Cerebras -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #18 of 28 · Wafer-Scale AI Hardware · September 2025</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Cerebras Systems</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">The dinner-plate chip. $1.1B Series G at $8.1B led by Fidelity. $10B OpenAI deal announced Jan 2026. WSE-3: 56× larger than any GPU, 20× faster inference, 4 trillion transistors. Revenue $6M→$70M in 12 months. IPO filing H1 2026, ticker CBRS.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$1.1B Series G</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$10B OpenAI Deal</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">WSE-3</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Pre-IPO</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#99ebfceafcf8ebfaf1d9f6f5e0f4e9eceaeafcebeff0fafceab7f7fceda6eaecfbf3fcfaeda4c9ecebfaf1f8eafca3b9dafcebfcfbebf8eab9cae0eaedfcf4eab9cbfce9f6ebedb97b190db9bdabada0" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+      <!-- Groq -->
+      <div style="background:var(--card);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;position:relative;transition:background .2s,border-color .2s;"
+           onmouseover="this.style.background='var(--card-h)';this.style.borderColor='rgba(255,215,0,.2)'"
+           onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:.5;"></div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Report #22 of 28 · AI Inference Hardware · September 2025</div>
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--bg);background:var(--cyan);padding:3px 10px;display:inline-block;margin-bottom:8px;">★ Acquired · NVIDIA · $20B · Dec 24, 2025</div>
+        <div style="font-family:var(--fd);font-size:32px;color:var(--white);margin-bottom:8px;">Groq</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.6);line-height:1.68;margin-bottom:18px;flex:1;">The most dramatic AI hardware exit in history. $750M at $6.9B in September — then NVIDIA's $20B acquisition 98 days later. Jonathan Ross: TPU co-creator → LPU founder → NVIDIA Chief Software Architect. 2M+ developers. Saudi Arabia $1.5B sovereign deployment.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">NVIDIA $20B Exit</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">$750M Series D-3</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">LPU Architecture</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">98-Day Exit</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fd);font-size:34px;color:var(--white);"><sup style="font-size:16px;vertical-align:super;">$</sup>249</div>
+          <a href="/cdn-cgi/l/email-protection#9ceef9eff9fdeefff4dcf3f0e5f1ece9efeff9eeeaf5fff9efb2f2f9e8a3efe9fef6f9ffe8a1cce9eefff4fdeff9a6bcdbeef3edbccef9ecf3eee8bc7e1c08bcb8aea8a5" style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:11px 18px;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Purchase &amp; Download</a>
+        </div>
+      </div>
+
+      <!-- Coming Soon -->
+      <div style="background:rgba(255,255,255,.015);border:1px solid var(--border);padding:34px 30px 26px;display:flex;flex-direction:column;opacity:.45;pointer-events:none;">
+        <div style="font-family:var(--fm);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Reports #03, #10, #12–16, #19–21, #23–28</div>
+        <div style="font-family:var(--fd);font-size:28px;color:var(--white);margin-bottom:8px;">16 More Reports</div>
+        <div style="font-size:12.5px;color:rgba(255,255,255,0.5);line-height:1.68;margin-bottom:18px;flex:1;">Covering $100M+ rounds across AI infrastructure, quantum computing, robotics, biotech, and deep tech. Publishing Q2–Q3 2026. Annual Pass holders receive all reports automatically.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px;">
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Coming Q2–Q3 2026</span>
+          <span style="font-family:var(--fm);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;">Annual Pass Included</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);">
+          <div style="font-family:var(--fu);font-size:16px;color:var(--muted);">Included in Annual Pass</div>
+          <div style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:11px 18px;">Forthcoming</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="font-size:11px;color:var(--muted);margin-top:22px;line-height:1.7;">All purchases include instant PDF download upon payment confirmation. Institutional licensing &amp; volume pricing: <a href="/cdn-cgi/l/email-protection#80f2e5f3e5e1f2e3e8c0efecf9edf0f5f3f3e5f2f6e9e3e5f3aeeee5f4" style="color:var(--cyan);text-decoration:none;"><span class="__cf_email__" data-cfemail="d1a3b4a2b4b0a3b2b991bebda8bca1a4a2a2b4a3a7b8b2b4a2ffbfb4a5">[email&#160;protected]</span></a>. Reports are for informational purposes only and do not constitute investment advice.</p>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<section id="consulting" style="background:var(--bg2);">
+  <div class="si">
+    <div class="slb">Strategic Advisory</div>
+    <h2 class="stit">CONSULTING</h2>
+    <p class="ssub">Olympus Services provides institutional-grade strategic advisory to companies navigating the AI hardware, spatial computing, and mobile infrastructure landscape. Partnership architecture, investor positioning, and technology commercialization at the platform level.</p>
+
+    <!-- Six Service Cards -->
+    <div class="sg" style="margin-bottom:60px;">
+
+      <div class="sc">
+        <div class="ct">I</div>
+        <h3 class="ctit">Partnership Architecture</h3>
+        <p class="cd">Structuring multi-party platform partnerships across Silicon, Glass, Network, and Software layers. LOI design, term sheet architecture, and strategic sequencing for maximum negotiating leverage. Proven Triple-Lock framework adaptable to any hardware ecosystem.</p>
+        <a href="/cdn-cgi/l/email-protection#95f6fafbe6e0f9e1fcfbf2d5faf9ecf8e5e0e6e6f0e7e3fcf6f0e6bbfbf0e1aae6e0f7fff0f6e1a8d6fafbe6e0f9e1fcfbf2afb5c5f4e7e1fbf0e7e6fdfce5b5d4e7f6fdfce1f0f6e1e0e7f0" class="cb">Schedule Discovery →</a>
+      </div>
+
+      <div class="sc">
+        <div class="ct">II</div>
+        <h3 class="ctit">Investor Positioning</h3>
+        <p class="cd">Pitch deck architecture, financial model structuring, and narrative development for Series A and strategic rounds. Deep experience with corporate venture arms including Google Ventures, AWS Business Development, and sovereign wealth fund pathways.</p>
+        <a href="/cdn-cgi/l/email-protection#a1c2cecfd2d4cdd5c8cfc6e1cecdd8ccd1d4d2d2c4d3d7c8c2c4d28fcfc4d59ed2d4c3cbc4c2d59ce2cecfd2d4cdd5c8cfc69b81e8cfd7c4d2d5ced381f1ced2c8d5c8cecfc8cfc6" class="cb">Schedule Discovery →</a>
+      </div>
+
+      <div class="sc">
+        <div class="ct">III</div>
+        <h3 class="ctit">Technology Commercialization</h3>
+        <p class="cd">From patent to platform. Licensing strategy, royalty architecture, and Intel Inside–style commercialization models for deep tech IP. Specialization in spatial computing, semiconductor architecture, 5G-Advanced networking, and mobile platform disruption.</p>
+        <a href="/cdn-cgi/l/email-protection#c5a6aaabb6b0a9b1acaba285aaa9bca8b5b0b6b6a0b7b3aca6a0b6ebaba0b1fab6b0a7afa0a6b1f886aaabb6b0a9b1acaba2ffe591a0a6adabaaa9aaa2bce586aaa8a8a0b7a6aca4a9acbfa4b1acaaab" class="cb">Schedule Discovery →</a>
+      </div>
+
+      <div class="sc">
+        <div class="ct">IV</div>
+        <h3 class="ctit">Private Market Research</h3>
+        <p class="cd">Custom deep research on private companies, technology landscapes, and competitive dynamics. The same investor-grade methodology behind the Olympus Services Intelligence report series — applied to your specific competitive intelligence and due diligence needs.</p>
+        <a href="/cdn-cgi/l/email-protection#413324322420332229012e2d382c31343232243337282224326f2f24357e3234232b2422357c023432352e2c6113243224203322296113243034243235" class="cb">Request Custom Research →</a>
+      </div>
+
+      <div class="sc">
+        <div class="ct">V</div>
+        <h3 class="ctit">Platform Alliance Strategy</h3>
+        <p class="cd">Identifying, sequencing, and structuring platform alliances with hyperscalers, mobile OEMs, and carrier partners. GV, AWS BD, and T-Mobile engagement frameworks. Additive-not-competitive positioning to maximize partner acceptance and minimize competitive resistance.</p>
+        <a href="/cdn-cgi/l/email-protection#6e0d01001d1b021a0700092e010217031e1b1d1d0b1c18070d0b1d40000b1a511d1b0c040b0d1a532d01001d1b021a070009544e3e020f1a08011c034e2f0202070f000d0b4e3d1a1c0f1a0b0917" class="cb">Schedule Discovery →</a>
+      </div>
+
+      <div class="sc">
+        <div class="ct">VI</div>
+        <h3 class="ctit">App Store Disruption Strategy</h3>
+        <p class="cd">Strategy for companies building outside the Apple/Google duopoly. Carrier billing infrastructure, direct developer monetization, and regulatory arbitrage frameworks that legally bypass 30% platform taxation using existing 5G-Advanced carrier infrastructure.</p>
+        <a href="/cdn-cgi/l/email-protection#9cfff3f2efe9f0e8f5f2fbdcf3f0e5f1ece9efeff9eeeaf5fff9efb2f2f9e8a3efe9fef6f9ffe8a1dff3f2efe9f0e8f5f2fba6bcddececbccfe8f3eef9bcd8f5efeee9ece8f5f3f2" class="cb">Schedule Discovery →</a>
+      </div>
+
+    </div>
+
+    <!-- CTA Block -->
+    <div style="background:var(--bg3);border:1px solid rgba(255,215,0,.22);padding:56px 52px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;position:relative;overflow:hidden;" class="cta-block">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),rgba(255,165,0,0.9));"></div>
+      <div>
+        <div style="font-family:var(--fd);font-size:clamp(28px,3vw,44px);color:var(--white);line-height:1.1;margin-bottom:12px;">Ready to begin a strategic engagement?</div>
+        <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.7;max-width:500px;">Olympus Services works with a selective roster of clients navigating high-stakes technology commercialization. Initial discovery sessions are complimentary for qualified prospects.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;flex-shrink:0;">
+        <a href="/cdn-cgi/l/email-protection#beddd1d0cdcbd2cad7d0d9fed1d2c7d3cecbcdcddbccc8d7dddbcd90d0dbca81cdcbdcd4dbddca83fad7cdddd1c8dbccc79eeddbcdcdd7d1d09eecdbcfcbdbcdca" style="font-family:var(--fu);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--bg);background:var(--cyan);padding:15px 30px;text-decoration:none;text-align:center;white-space:nowrap;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Schedule Discovery Session</a>
+        <a href="/cdn-cgi/l/email-protection#aecdc1c0dddbc2dac7c0c9eec1c2d7c3dedbddddcbdcd8c7cdcbdd80c0cbda91dddbccc4cbcdda93edcfdecfccc7c2c7dac7cbdd8eeacbcdc58efccbdfdbcbddda" style="font-family:var(--fu);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:14px 30px;text-decoration:none;text-align:center;white-space:nowrap;transition:background .2s,color .2s;" onmouseover="this.style.background='rgba(255,215,0,.08)'" onmouseout="this.style.background='transparent'">Request Capabilities Deck</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="div"></div>
+
+<section id="tools" style="background:var(--bg2);">
+  <div class="si">
+    <div class="slb">Recommended Platforms</div>
+    <h2 class="stit">PARTNER TOOLS</h2>
+    <p class="ssub">Curated platforms for Olympus Services clients — spanning market analysis, crypto compliance, and digital commerce infrastructure.</p>
+
+    <div style="display:flex;flex-direction:column;gap:2px;">
+
+      <!-- TradingView -->
+      <a href="https://www.tradingview.com/?aff_id=155327" target="_blank" rel="noopener"
+         style="display:flex;align-items:center;gap:32px;background:var(--card);border:1px solid var(--border);border-left:2px solid var(--cyan);padding:36px 40px;text-decoration:none;color:inherit;transition:background .25s,border-color .25s;position:relative;overflow:hidden;"
+         onmouseover="this.style.background='var(--card-h)';this.style.borderColor='var(--border-c)'"
+         onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity .25s;" class="tl-accent"></div>
+        <div style="width:56px;height:56px;background:var(--cyan-dim);border:1px solid rgba(255,215,0,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);">📈</div>
+        <div style="flex:1;">
+          <div style="font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;">Charting &amp; Analysis</div>
+          <div style="font-family:var(--fu);font-size:22px;font-weight:700;color:var(--white);letter-spacing:.05em;margin-bottom:8px;">TradingView</div>
+          <div style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.65;">World-class charting platform used by over 50 million traders. Real-time data, powerful indicators, and a thriving community of market analysts.</div>
+        </div>
+        <div style="font-family:var(--fu);font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:10px 22px;flex-shrink:0;white-space:nowrap;transition:background .2s,color .2s;"
+             onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'"
+             onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Launch →</div>
+      </a>
+
+      <!-- CoinLedger -->
+      <a href="https://coinledger.io/?fpr=george23" target="_blank" rel="noopener"
+         style="display:flex;align-items:center;gap:32px;background:var(--card);border:1px solid var(--border);border-left:2px solid var(--cyan);padding:36px 40px;text-decoration:none;color:inherit;transition:background .25s,border-color .25s;position:relative;overflow:hidden;"
+         onmouseover="this.style.background='var(--card-h)';this.style.borderColor='var(--border-c)'"
+         onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="width:56px;height:56px;background:var(--cyan-dim);border:1px solid rgba(255,215,0,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);">🪙</div>
+        <div style="flex:1;">
+          <div style="font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;">Crypto Tax Software</div>
+          <div style="font-family:var(--fu);font-size:22px;font-weight:700;color:var(--white);letter-spacing:.05em;margin-bottom:8px;">CoinLedger</div>
+          <div style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.65;">The simplest way to calculate your crypto taxes. Automatically import transactions, generate IRS-ready reports, and stay compliant with ease.</div>
+        </div>
+        <div style="font-family:var(--fu);font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:10px 22px;flex-shrink:0;white-space:nowrap;transition:background .2s,color .2s;"
+             onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'"
+             onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Launch →</div>
+      </a>
+
+      <!-- Digistore24 -->
+      <a href="https://teslamedbedx.com/digi-store/" target="_blank" rel="noopener"
+         style="display:flex;align-items:center;gap:32px;background:var(--card);border:1px solid var(--border);border-left:2px solid var(--cyan);padding:36px 40px;text-decoration:none;color:inherit;transition:background .25s,border-color .25s;position:relative;overflow:hidden;"
+         onmouseover="this.style.background='var(--card-h)';this.style.borderColor='var(--border-c)'"
+         onmouseout="this.style.background='var(--card)';this.style.borderColor='var(--border)'">
+        <div style="width:56px;height:56px;background:var(--cyan-dim);border:1px solid rgba(255,215,0,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.6rem;clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);">🛒</div>
+        <div style="flex:1;">
+          <div style="font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;">Digital Marketplace</div>
+          <div style="font-family:var(--fu);font-size:22px;font-weight:700;color:var(--white);letter-spacing:.05em;margin-bottom:8px;">Digistore24</div>
+          <div style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.65;">Access our curated digital products and services marketplace. Premium resources handpicked by Olympus Services for your financial growth journey.</div>
+        </div>
+        <div style="font-family:var(--fu);font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--cyan);border:1px solid rgba(255,215,0,.38);padding:10px 22px;flex-shrink:0;white-space:nowrap;transition:background .2s,color .2s;"
+             onmouseover="this.style.background='var(--cyan)';this.style.color='var(--bg)'"
+             onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">Launch →</div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -616,38 +1171,4 @@
             <div><div class="cil">Website</div><div class="civ"><a href="https://olympusservices.net" target="_blank">OlympusServices.net</a></div></div>
           </div>
           <div class="ci">
-            <div><div class="cil">Email</div><div class="civ"><a href="mailto:info@olympusservices.net">info@olympusservices.net</a></div></div>
-          </div>
-          <div class="ci">
-            <div><div class="cil">Phone</div><div class="civ"><a href="tel:3129055589">(312) 905-5589</a></div></div>
-          </div>
-        </div>
-      </div>
-      <div style="padding-top:8px;">
-        <div style="font-family:var(--fu);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">Important Disclosures</div>
-        <div class="db">
-          <strong>Legal Disclaimer</strong>
-          This site and all research reports produced by Olympus Services are intended solely for informational and educational purposes. Nothing contained herein constitutes financial, investment, legal, or tax advice. Past performance is not indicative of future results. All projections and financial models are hypothetical and subject to material risks and uncertainties.
-          <br><br>
-          All research content is the intellectual property of Olympus Services. Unauthorized reproduction, distribution, or resale is strictly prohibited.
-          <br><br>
-          © 2026 Olympus Services · OlympusServices.net · All Rights Reserved · Confidential Research Reports
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="fi">
-    <div class="fc">© 2026 <span>Olympus Services</span> · OlympusServices.net · All Rights Reserved</div>
-    <div class="fl">
-      <a href="#services">Research</a>
-      <a href="#ai3d">ai3D</a>
-      <a href="mailto:info@olympusservices.net">Contact</a>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
+            <div><div class="cil">Email</div><div class="civ"><a href="/cdn-cgi/l/email-protection#83e0ecedf0f6eff7eaede4c3eceffaeef3f6f0f0e6f1f5eae0e6f0adede6f7"><span class="__cf_email__" data-cfemail="02616d6c71776e766b6c65426d6e7b6f727771716770746b6167712c6c6776">[
