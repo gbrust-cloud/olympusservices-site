@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olympus Services · AI Consulting & Digital Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:    #070810;
+    --bg2:   #0d0f1a;
+    --bg3:   #111420;
+    --white: #ffffff;
+    --cyan:  #00e5ff;
+    --cyan-dim: rgba(0,229,255,0.12);
+    --cyan-glow: rgba(0,229,255,0.05);
+    --border: rgba(255,255,255,0.07);
+    --border-c: rgba(0,229,255,0.28);
+    --muted: rgba(255,255,255,0.42);
+    --card:  rgba(255,255,255,0.033);
+    --card-h: rgba(0,229,255,0.055);
+    --fd: 'Bebas Neue', sans-serif;
+    --fu: 'Rajdhani', sans-serif;
+    --fb: 'DM Sans', sans-serif;
+    --fm: 'Space Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--fb);
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,229,255,0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,255,0.022) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none; z-index: 0;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(7,8,16,0.94);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--border);
+  }
+  header::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--cyan) 50%, transparent 100%);
+    opacity: 0.4;
+  }
+  .hi {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 40px; height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .lm {
+    width: 36px; height: 36px;
+    background: var(--cyan-dim);
+    border: 1px solid rgba(0,229,255,0.45);
+    display: flex; align-items: center; justify-content: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    font-family: var(--fd); font-size: 18px; color: var(--cyan); line-height: 1;
+  }
+  .lt { display: flex; flex-direction: column; }
+  .ln {
+    font-family: var(--fu); font-weight: 700; font-size: 15px;
+    letter-spacing: 0.16em; color: var(--white); text-transform: uppercase; line-height: 1;
+  }
+  .ls {
+    font-family: var(--fm); font-size: 9px; color: var(--cyan);
+    letter-spacing: 0.1em; text-transform: uppercase; line-height: 1; margin-top: 3px;
+  }
+  nav { display: flex; align-items: center; gap: 36px; }
+  nav a {
+    font-family: var(--fu); font-size: 13px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.65); text-decoration: none;
+    transition: color 0.2s; position: relative;
+  }
+  nav a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1px;
+    background: var(--cyan); transform: scaleX(0); transition: transform 0.2s; transform-origin: left;
+  }
+  nav a:hover { color: var(--white); }
+  nav a:hover::after { transform: scaleX(1); }
+  .ncta {
+    font-family: var(--fu) !important; font-size: 12px !important; font-weight: 700 !important;
+    letter-spacing: 0.15em !important; text-transform: uppercase !important;
+    color: var(--bg) !important; background: var(--cyan) !important;
+    padding: 8px 22px !important;
+    clip-path: polygon(7px 0%, 100% 0%, calc(100% - 7px) 100%, 0% 100%) !important;
+    transition: opacity 0.2s !important;
+  }
+  .ncta:hover { opacity: 0.85 !important; }
+  .ncta::after { display: none !important; }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative; min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 40px 80px; overflow: hidden;
+  }
+  .hg1 {
+    position: absolute; top: 15%; right: 8%; width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(0,229,255,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hg2 {
+    position: absolute; bottom: 8%; left: 3%; width: 450px; height: 450px;
+    background: radial-gradient(circle, rgba(100,60,255,0.055) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hi2 { max-width: 1280px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+  .heb {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--fm); font-size: 11px; letter-spacing: 0.2em; color: var(--cyan);
+    text-transform: uppercase; margin-bottom: 28px;
+    opacity: 0; animation: fu .8s ease .1s forwards;
+  }
+  .heb::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--cyan); }
+  .ht {
+    font-family: var(--fd); font-size: clamp(64px,9vw,128px);
+    line-height: .92; color: var(--white); letter-spacing: .02em; margin-bottom: 32px;
+    opacity: 0; animation: fu .8s ease .25s forwards;
+  }
+  .ht span { color: var(--cyan); display: block; }
+  .hd {
+    max-width: 560px; font-size: 17px; font-weight: 300; color: var(--white);
+    line-height: 1.76; margin-bottom: 48px;
+    opacity: 0; animation: fu .8s ease .4s forwards;
+  }
+  .ha {
+    display: flex; align-items: center; gap: 20px;
+    opacity: 0; animation: fu .8s ease .55s forwards;
+  }
+  .bp {
+    font-family: var(--fu); font-size: 13px; font-weight: 700; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--bg); background: var(--cyan);
+    padding: 14px 32px; text-decoration: none; display: inline-block;
+    clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+    transition: opacity .2s, box-shadow .2s;
+    box-shadow: 0 0 30px rgba(0,229,255,.22);
+  }
+  .bp:hover { opacity: .9; box-shadow: 0 0 50px rgba(0,229,255,.38); }
+  .bg {
+    font-family: var(--fu); font-size: 13px; font-weight: 600; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--white); text-decoration: none;
+    border: 1px solid var(--border); padding: 14px 32px; display: inline-block;
+    transition: border-color .2s, color .2s;
+  }
+  .bg:hover { border-color: var(--cyan); color: var(--cyan); }
+  .hs {
+    display: flex; gap: 60px; margin-top: 80px; padding-top: 48px;
+    border-top: 1px solid var(--border);
+    opacity: 0; animation: fu .8s ease .7s forwards;
+  }
+  .sn { font-family: var(--fd); font-size: 44px; line-height: 1; color: var(--white); margin-bottom: 6px; }
+  .sn span { color: var(--cyan); }
+  .sl { font-family: var(--fu); font-size: 11px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); }
+
+  /* ── COMMON ── */
+  section { position: relative; z-index: 1; }
+  .si { max-width: 1280px; margin: 0 auto; padding: 100px 40px; }
+  .slb {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--fm); font-size: 11px; letter-spacing: .2em; color: var(--cyan);
+    text-transform: uppercase; margin-bottom: 20px;
+  }
+  .slb::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--cyan); }
+  .stit {
+    font-family: var(--fd); font-size: clamp(40px,5vw,68px);
+    line-height: 1; color: var(--white); letter-spacing: .02em; margin-bottom: 16px;
+  }
+  .ssub { font-size: 16px; font-weight: 300; color: var(--white); max-width: 600px; line-height: 1.7; margin-bottom: 60px; }
+  .div { height: 1px; background: linear-gradient(90deg,transparent,var(--border-c),transparent); opacity: .35; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--bg2); }
+  .sg { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px,1fr)); gap: 2px; }
+  .sc {
+    background: var(--card); border: 1px solid var(--border);
+    padding: 40px 36px; position: relative; overflow: hidden;
+    transition: background .3s, border-color .3s;
+  }
+  .sc::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    transform: scaleX(0); transition: transform .4s ease; transform-origin: left;
+  }
+  .sc:hover { background: var(--card-h); border-color: rgba(0,229,255,.18); }
+  .sc:hover::before { transform: scaleX(1); }
+  .ct {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--fm); font-size: 10px; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--cyan); background: var(--cyan-dim);
+    border: 1px solid rgba(0,229,255,.18); padding: 4px 10px; margin-bottom: 24px;
+  }
+  .cp { font-family: var(--fd); font-size: 48px; color: var(--white); line-height: 1; margin-bottom: 4px; }
+  .cpn { font-family: var(--fu); font-size: 11px; font-weight: 600; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; margin-bottom: 20px; }
+  .ctit { font-family: var(--fu); font-size: 22px; font-weight: 700; color: var(--white); letter-spacing: .02em; margin-bottom: 12px; line-height: 1.2; }
+  .cd { font-size: 14px; font-weight: 300; color: var(--white); line-height: 1.65; margin-bottom: 28px; }
+  .cf { list-style: none; margin-bottom: 32px; }
+  .cf li {
+    font-family: var(--fu); font-size: 13px; font-weight: 500; color: var(--white);
+    padding: 6px 0; border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 10px; line-height: 1.4;
+  }
+  .cf li::before { content: '▸'; color: var(--cyan); font-size: 10px; margin-top: 2px; flex-shrink: 0; }
+  .cf li:last-child { border-bottom: none; }
+  .cb {
+    font-family: var(--fu); font-size: 12px; font-weight: 700; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--cyan); text-decoration: none;
+    border: 1px solid rgba(0,229,255,.38); padding: 11px 24px; display: inline-block;
+    transition: background .2s, color .2s;
+  }
+  .cb:hover { background: var(--cyan); color: var(--bg); }
+
+  /* ── AI3D ── */
+  #ai3d { background: var(--bg); overflow: hidden; }
+  #ai3d::before {
+    content: ''; position: absolute; top: -200px; right: -200px;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(0,229,255,.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .ag { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .pb {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--fm); font-size: 10px; letter-spacing: .12em; color: var(--cyan);
+    background: var(--cyan-dim); border: 1px solid rgba(0,229,255,.22);
+    padding: 6px 14px; margin-bottom: 32px;
+  }
+  .at {
+    font-family: var(--fd); font-size: clamp(44px,5vw,76px);
+    line-height: .95; color: var(--white); letter-spacing: .02em; margin-bottom: 24px;
+  }
+  .at span { color: var(--cyan); }
+  .ad { font-size: 16px; font-weight: 300; color: var(--white); line-height: 1.76; margin-bottom: 40px; }
+  .ams { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 40px; }
+  .mb {
+    background: var(--card); border: 1px solid var(--border);
+    padding: 24px 20px; transition: border-color .2s;
+  }
+  .mb:hover { border-color: rgba(0,229,255,.22); }
+  .mv { font-family: var(--fd); font-size: 32px; color: var(--white); line-height: 1; margin-bottom: 6px; }
+  .mv span { color: var(--cyan); }
+  .mk { font-family: var(--fu); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+  /* Pool card */
+  .pc {
+    background: var(--bg3); border: 1px solid var(--border); padding: 40px; position: relative;
+  }
+  .pc::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--cyan), rgba(120,80,255,.8));
+  }
+  .pch { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 32px; }
+  .pct { font-family: var(--fu); font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .ptot { font-family: var(--fd); font-size: 40px; color: var(--white); line-height: 1; }
+  .ptot span { color: var(--cyan); }
+  .pr {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 0; border-bottom: 1px solid var(--border); position: relative;
+  }
+  .pr:last-of-type { border-bottom: none; }
+  .prb { position: absolute; left: 0; top: 0; bottom: 0; background: var(--cyan-glow); z-index: 0; }
+  .prc { display: flex; align-items: center; justify-content: space-between; width: 100%; position: relative; z-index: 1; }
+  .pp { display: flex; align-items: center; gap: 12px; }
+  .pd { width: 8px; height: 8px; background: var(--cyan); clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%); }
+  .pn { font-family: var(--fu); font-size: 15px; font-weight: 700; color: var(--white); letter-spacing: .05em; }
+  .pl { font-family: var(--fm); font-size: 10px; color: var(--muted); }
+  .pa { text-align: right; }
+  .pav { font-family: var(--fd); font-size: 22px; color: var(--white); line-height: 1; }
+  .pap { font-family: var(--fm); font-size: 10px; color: var(--cyan); }
+  .tll {
+    margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .tll span { font-family: var(--fm); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--cyan); }
+
+  /* CONTACT */
+  #contact { background: var(--bg2); }
+  .cg { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .cdet { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+  .ci {
+    display: flex; align-items: flex-start; gap: 0;
+    background: var(--card); border: 1px solid var(--border);
+    border-left: 2px solid var(--cyan); padding: 18px 24px;
+  }
+  .cil { font-family: var(--fu); font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .civ { font-family: var(--fu); font-size: 16px; font-weight: 600; color: var(--white); }
+  .civ a { color: var(--white); text-decoration: none; transition: color .2s; }
+  .civ a:hover { color: var(--cyan); }
+  .db {
+    background: rgba(0,229,255,.03); border: 1px solid rgba(0,229,255,.1);
+    padding: 28px; font-size: 12px; font-weight: 300; color: rgba(255,255,255,.58);
+    line-height: 1.72;
+  }
+  .db strong { font-family: var(--fu); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 12px; }
+
+  /* FOOTER */
+  footer { background: var(--bg); border-top: 1px solid var(--border); padding: 36px 40px; }
+  .fi { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .fc { font-family: var(--fm); font-size: 11px; letter-spacing: .08em; color: var(--muted); }
+  .fc span { color: var(--cyan); }
+  .fl { display: flex; gap: 24px; }
+  .fl a { font-family: var(--fu); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color .2s; }
+  .fl a:hover { color: var(--white); }
+
+  @keyframes fu { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+
+  @media(max-width:900px){
+    .ag,.cg { grid-template-columns:1fr; gap:48px; }
+    .hs { gap:28px; flex-wrap:wrap; }
+    nav { display:none; }
+    .hi,.si,.hero,footer { padding-left:24px; padding-right:24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hi">
+    <a href="#" class="logo">
+      <div class="lm">O</div>
+      <div class="lt">
+        <span class="ln">Olympus Services</span>
+        <span class="ls">AI Consulting · Digital Intelligence</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#services">Research</a>
+      <a href="#ai3d">ai3D</a>
+      <a href="#contact">Contact</a>
+      <a href="https://olympusservices.net" target="_blank" class="ncta">Visit Site</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hg1"></div>
+  <div class="hg2"></div>
+  <div class="hi2">
+    <div class="heb">Agentic AI Research Library · 2026</div>
+    <h1 class="ht">INTELLIGENCE<br><span>AT SCALE.</span></h1>
+    <p class="hd">Olympus Services delivers institutional-grade research on AI strategy, platform economics, spatial computing, and digital asset intelligence — built for operators, investors, and founders who move first.</p>
+    <div class="ha">
+      <a href="#services" class="bp">Explore Research</a>
+      <a href="#ai3d" class="bg">ai3D Platform</a>
+    </div>
+    <div class="hs">
+      <div><div class="sn">5<span>+</span></div><div class="sl">Research Reports</div></div>
+      <div><div class="sn"><span>$</span>40</div><div class="sl">Net-40 Pool / Device</div></div>
+      <div><div class="sn">3.5<span>B</span></div><div class="sl">Android Addressable</div></div>
+      <div><div class="sn"><span>$</span>22<span>B</span></div><div class="sl">ai3D Enterprise Value</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<section id="services">
+  <div class="si">
+    <div class="slb">Research Library</div>
+    <h2 class="stit">AGENTIC AI REPORTS</h2>
+    <p class="ssub">Deep-architecture intelligence reports covering platforms, frameworks, and economic models reshaping digital infrastructure.</p>
+    <div class="sg">
+
+      <div class="sc">
+        <div class="ct">Platform Economics</div>
+        <div class="cp">$147</div>
+        <div class="cpn">One-time access · PDF delivery</div>
+        <h3 class="ctit">Carrier Billing Economics: Bypassing the App Store Tax</h3>
+        <p class="cd">Full technical and economic architecture of carrier billing as a structural bypass of Apple and Google's 30% platform tax — including T-Mobile 5G-Advanced integration and the ai3D App Engine model.</p>
+        <ul class="cf">
+          <li>How Apple &amp; Google extract $150B+ annually through their platform tax</li>
+          <li>T-Mobile 5G-Advanced carrier billing architecture breakdown</li>
+          <li>Legal compliance framework for direct carrier billing in the US</li>
+          <li>Developer economics: App Store vs. Carrier Billing vs. ai3D App Engine</li>
+          <li>Revenue routing frameworks bypassing the app store duopoly</li>
+          <li>Implementation roadmap for platform operators and developers</li>
+        </ul>
+        <a href="mailto:info@olympusservices.net?subject=Purchase: Carrier Billing Economics" class="cb">Access Report →</a>
+      </div>
+
+      <div class="sc">
+        <div class="ct">Digital Asset Tax</div>
+        <div class="cp">$127</div>
+        <div class="cpn">One-time access · PDF delivery</div>
+        <h3 class="ctit">Crypto Tax Optimization: Advanced Agentic AI Framework</h3>
+        <p class="cd">Complete 2025–2026 IRS compliance framework for digital asset holders — covering DeFi, staking, NFTs, wash-sale strategy, and AI-powered reporting via CoinLedger.</p>
+        <ul class="cf">
+          <li>IRS enforcement priorities 2025–2026 and portfolio implications</li>
+          <li>Gain/loss optimization across 500+ exchanges and wallets</li>
+          <li>DeFi, staking, NFT, and airdrop tax treatment — full matrix</li>
+          <li>Wash-sale analysis and 2025 regulatory update</li>
+          <li>CoinLedger integration for automated IRS-compliant reporting</li>
+          <li>Audit defense documentation and record-keeping protocols</li>
+        </ul>
+        <a href="mailto:info@olympusservices.net?subject=Purchase: Crypto Tax Optimization" class="cb">Access Report →</a>
+      </div>
+
+      <div class="sc">
+        <div class="ct">Algorithmic Trading</div>
+        <div class="cp">$167</div>
+        <div class="cpn">One-time access · PDF delivery</div>
+        <h3 class="ctit">Algorithmic Edge: TradingView Strategy Architecture for AI-Era Markets</h3>
+        <p class="cd">Institutional-grade systematic strategy architecture on TradingView's Pine Script engine — AI-augmented signal design, backtesting frameworks with statistical validity, and a fully automated execution pipeline.</p>
+        <ul class="cf">
+          <li>Pine Script strategy architecture: signal design to live execution</li>
+          <li>Agentic AI-augmented indicator development &amp; signal validation</li>
+          <li>Backtesting frameworks: Sharpe, Sortino, max drawdown</li>
+          <li>Multi-asset screening: equities, crypto, forex, commodities</li>
+          <li>Risk-adjusted position sizing and portfolio integration</li>
+          <li>Alert infrastructure and automated execution pipeline design</li>
+        </ul>
+        <a href="mailto:info@olympusservices.net?subject=Purchase: Algorithmic Edge TradingView" class="cb">Access Report →</a>
+      </div>
+
+      <div class="sc">
+        <div class="ct">Affiliate Intelligence</div>
+        <div class="cp">$97</div>
+        <div class="cpn">One-time access · PDF delivery</div>
+        <h3 class="ctit">Agentic Affiliate: Digistore24 Revenue Architecture at Scale</h3>
+        <p class="cd">Complete revenue architecture for Digistore24 affiliate marketing — from product selection to funnel design, email automation, and AI-powered content systems for scaling consistent monthly income.</p>
+        <ul class="cf">
+          <li>Digistore24 product selection matrix — highest-converting products</li>
+          <li>Traffic arbitrage strategies for paid and organic channels</li>
+          <li>High-converting funnel architecture and landing page frameworks</li>
+          <li>Automated email sequence design for affiliate products</li>
+          <li>Revenue attribution modeling and conversion tracking setup</li>
+          <li>Scaling framework: first commission to consistent monthly revenue</li>
+        </ul>
+        <a href="mailto:info@olympusservices.net?subject=Purchase: Agentic Affiliate Digistore24" class="cb">Access Report →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<section id="ai3d">
+  <div class="si">
+    <div class="ag">
+      <div>
+        <div class="pb">⬡ &nbsp;US Patent 12,294,690 B2 · Granted May 2025</div>
+        <h2 class="at">THE <span>ai3D</span><br>PLATFORM</h2>
+        <p class="ad">ai3D Inc. holds the foundational patent on glass-free 3D display film structure for mobile handsets — a spatial computing layer that expands from ~10M headset devices to 3.5 billion Android handsets. No glasses. No goggles. No new hardware required.</p>
+        <div class="ams">
+          <div class="mb"><div class="mv"><span>$</span>18.6<span>B</span></div><div class="mk">Base Enterprise Value</div></div>
+          <div class="mb"><div class="mv">3.5<span>B</span></div><div class="mk">Android Addressable</div></div>
+          <div class="mb"><div class="mv"><span>$</span>22.9<span>B</span></div><div class="mk">Bull Enterprise Value</div></div>
+          <div class="mb"><div class="mv">75<span>%</span></div><div class="mk">Developer Revenue Share</div></div>
+        </div>
+        <a href="mailto:info@olympusservices.net?subject=ai3D Strategic Partnership Inquiry" class="bp">Partnership Inquiry →</a>
+
+        <!-- ai3D Flagship Report -->
+        <div style="background:var(--card);border:1px solid var(--border);padding:40px 36px;margin-top:40px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),rgba(120,80,255,.8));"></div>
+          <div class="ct" style="margin-bottom:20px;">Flagship Report</div>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px;">
+            <h3 class="ctit" style="margin-bottom:0;font-size:20px;">The $40 Device Pool: ai3D Net-40 Royalty Framework</h3>
+            <div style="font-family:var(--fd);font-size:40px;color:var(--white);line-height:1;white-space:nowrap;">$247</div>
+          </div>
+          <p class="cd" style="margin-bottom:20px;">Complete financial model documentation for the ai3D Net-40 royalty architecture — DCF methodology, Triple-Lock partner economics, corrected Enterprise Value ($18.6B–$22.9B), and LOI architecture for institutional investors and sovereign wealth funds.</p>
+          <ul class="cf" style="margin-bottom:24px;">
+            <li>Net-40 pool: $40.00/device across Triple-Lock partners (Qualcomm, Samsung/LG, T-Mobile)</li>
+            <li>DCF modeling with corrected EV range — $18.6B base, $22.9B bull case</li>
+            <li>5-year partner revenue projections with Qualcomm as #1 beneficiary</li>
+            <li>Federal R&amp;D Tax Credit (IRC Section 41) at 6.5% integration</li>
+            <li>Apple delayed SDK licensee model — Year 3–4 entry framework (+$4.3B EV)</li>
+            <li>LOI architecture: Series A + exclusive patent license + platform partnership</li>
+          </ul>
+          <a href="mailto:info@olympusservices.net?subject=Purchase: ai3D Net-40 Royalty Framework" class="cb">Access Report →</a>
+        </div>
+      </div>
+
+      <div>
+        <!-- Pool Distribution -->
+        <div class="pc">
+          <div class="pch">
+            <div>
+              <div class="pct">Net-40 Pool Distribution</div>
+              <div class="ptot"><span>$</span>40<span>.00</span></div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.1em;margin-top:4px;">PER DEVICE · ARM HOLDINGS PRECEDENT MODEL</div>
+            </div>
+          </div>
+
+          <div class="pr">
+            <div class="prb" style="width:43.75%;"></div>
+            <div class="prc">
+              <div class="pp">
+                <div class="pd" style="background:#00e5ff;"></div>
+                <div><div class="pn">Qualcomm</div><div class="pl">Silicon Layer</div></div>
+              </div>
+              <div class="pa"><div class="pav">$17.50</div><div class="pap">43.75%</div></div>
+            </div>
+          </div>
+
+          <div class="pr">
+            <div class="prb" style="width:25%;"></div>
+            <div class="prc">
+              <div class="pp">
+                <div class="pd" style="background:#7b6fff;"></div>
+                <div><div class="pn">Samsung / LG</div><div class="pl">Glass Layer</div></div>
+              </div>
+              <div class="pa"><div class="pav">$10.00</div><div class="pap">25.00%</div></div>
+            </div>
+          </div>
+
+          <div class="pr">
+            <div class="prb" style="width:20%;"></div>
+            <div class="prc">
+              <div class="pp">
+                <div class="pd" style="background:#ff6b9d;"></div>
+                <div><div class="pn">T-Mobile</div><div class="pl">Network Layer</div></div>
+              </div>
+              <div class="pa"><div class="pav">$8.00</div><div class="pap">20.00%</div></div>
+            </div>
+          </div>
+
+          <div class="pr" style="border-bottom:none;">
+            <div class="prb" style="width:11.25%;background:rgba(0,229,255,.09);"></div>
+            <div class="prc">
+              <div class="pp">
+                <div class="pd" style="background:#ffffff;"></div>
+                <div><div class="pn">ai3D</div><div class="pl">Platform Residual</div></div>
+              </div>
+              <div class="pa"><div class="pav">$4.50</div><div class="pap">11.25%</div></div>
+            </div>
+          </div>
+
+          <div class="tll">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="3" y="6" width="8" height="7" rx="1" stroke="#00e5ff" stroke-width="1.2"/><path d="M4.5 6V4a2.5 2.5 0 0 1 5 0v2" stroke="#00e5ff" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <span>Triple-Lock: Silicon · Glass · Network</span>
+          </div>
+        </div>
+
+        <!-- 5-Year Projections -->
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:32px;margin-top:2px;">
+          <div style="font-family:var(--fu);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;">5-Year Pool Revenue Projections</div>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:2px;">
+            <div style="text-align:center;padding:14px 6px;background:var(--card);border:1px solid var(--border);">
+              <div style="font-family:var(--fd);font-size:18px;color:var(--white);">$200M</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:3px;">Y1</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--cyan);">5M units</div>
+            </div>
+            <div style="text-align:center;padding:14px 6px;background:var(--card);border:1px solid var(--border);">
+              <div style="font-family:var(--fd);font-size:18px;color:var(--white);">$400M</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:3px;">Y2</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--cyan);">10M units</div>
+            </div>
+            <div style="text-align:center;padding:14px 6px;background:var(--card);border:1px solid var(--border);">
+              <div style="font-family:var(--fd);font-size:18px;color:var(--white);">$600M</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:3px;">Y3</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--cyan);">15M units</div>
+            </div>
+            <div style="text-align:center;padding:14px 6px;background:var(--card);border:1px solid var(--border);">
+              <div style="font-family:var(--fd);font-size:18px;color:var(--white);">$1.2B</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:3px;">Y4</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--cyan);">30M units</div>
+            </div>
+            <div style="text-align:center;padding:14px 6px;background:rgba(0,229,255,.06);border:1px solid rgba(0,229,255,.2);">
+              <div style="font-family:var(--fd);font-size:18px;color:var(--cyan);">$2.0B</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:3px;">Y5</div>
+              <div style="font-family:var(--fm);font-size:9px;color:var(--cyan);">50M units</div>
+            </div>
+          </div>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:.1em;">5-YEAR TOTAL POOL</span>
+            <span style="font-family:var(--fd);font-size:28px;color:var(--white);">$<span style="color:var(--cyan);">4.4</span>B</span>
+          </div>
+        </div>
+
+        <!-- Apple Entry -->
+        <div style="background:var(--card);border:1px solid rgba(0,229,255,.14);padding:22px 28px;margin-top:2px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+          <div>
+            <div style="font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Apple Entry Model</div>
+            <div style="font-family:var(--fu);font-size:15px;font-weight:700;color:var(--white);">Year 3–4 SDK Licensee</div>
+            <div style="font-family:var(--fb);font-size:13px;font-weight:300;color:var(--white);margin-top:3px;">After Triple-Lock proven across 15M+ devices</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0;">
+            <div style="font-family:var(--fd);font-size:30px;color:var(--cyan);line-height:1;">+$4.3B</div>
+            <div style="font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.08em;margin-top:3px;">INCREMENTAL EV · BULL CASE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<section id="contact">
+  <div class="si">
+    <div class="cg">
+      <div>
+        <div class="slb">Direct Access</div>
+        <h2 class="stit">CONTACT</h2>
+        <p class="ssub">Institutional inquiries, research access, and strategic partnership discussions welcome.</p>
+        <div class="cdet">
+          <div class="ci">
+            <div><div class="cil">Website</div><div class="civ"><a href="https://olympusservices.net" target="_blank">OlympusServices.net</a></div></div>
+          </div>
+          <div class="ci">
+            <div><div class="cil">Email</div><div class="civ"><a href="mailto:info@olympusservices.net">info@olympusservices.net</a></div></div>
+          </div>
+          <div class="ci">
+            <div><div class="cil">Phone</div><div class="civ"><a href="tel:3129055589">(312) 905-5589</a></div></div>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top:8px;">
+        <div style="font-family:var(--fu);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;">Important Disclosures</div>
+        <div class="db">
+          <strong>Legal Disclaimer</strong>
+          This site and all research reports produced by Olympus Services are intended solely for informational and educational purposes. Nothing contained herein constitutes financial, investment, legal, or tax advice. Past performance is not indicative of future results. All projections and financial models are hypothetical and subject to material risks and uncertainties.
+          <br><br>
+          All research content is the intellectual property of Olympus Services. Unauthorized reproduction, distribution, or resale is strictly prohibited.
+          <br><br>
+          © 2026 Olympus Services · OlympusServices.net · All Rights Reserved · Confidential Research Reports
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <div class="fc">© 2026 <span>Olympus Services</span> · OlympusServices.net · All Rights Reserved</div>
+    <div class="fl">
+      <a href="#services">Research</a>
+      <a href="#ai3d">ai3D</a>
+      <a href="mailto:info@olympusservices.net">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
