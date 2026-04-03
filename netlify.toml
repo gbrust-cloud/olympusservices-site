@@ -88,3 +88,9 @@
   to = "https://olympusservices.net/:splat"
   status = 301
   force = true
+
+[functions]
+  directory = "netlify/functions"
+
+
+
