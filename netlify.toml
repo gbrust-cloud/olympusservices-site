@@ -5,7 +5,7 @@
 
 [build]
   publish = "."
-
+functions = "netlify/functions"
 # ── Global security & SEO headers ──────────────────────────
 [[headers]]
   for = "/*"
@@ -90,8 +90,8 @@
   force = true
 
 [functions]
-  directory = "Netlify/functions"
+  directory = "netlify/functions"
 
 
 
-update 
+ 
