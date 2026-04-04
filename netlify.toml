@@ -90,8 +90,8 @@ functions = "netlify/functions"
   force = true
 
 [functions]
-  directory = "Netlify/functions"
+  directory = "netlify/functions"
 
 
 
-update 
+ 
