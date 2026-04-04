@@ -1,0 +1,21 @@
+{
+  "name": "Olympus Services",
+  "short_name": "Olympus",
+  "description": "Institutional-grade AI research, platform economics consulting, and spatial computing intelligence.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#09080a",
+  "theme_color": "#FFD700",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
